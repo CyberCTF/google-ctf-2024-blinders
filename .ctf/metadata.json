@@ -1,0 +1,14 @@
+{
+  "title": "Google CTF 2024: Blinders",
+  "description": "A private set membership protocol on P-256: the server holds {0..255} minus one random number, answers at most two queries per round, and wants the hash of its set. Win 16 rounds to get the flag.",
+  "question": "Retrieve the flag from the challenge service.",
+  "category": "CRYPTO",
+  "difficulty": 4,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "private-set-membership",
+    "blinding",
+    "elliptic-curves",
+    "cryptography"
+  ]
+}
