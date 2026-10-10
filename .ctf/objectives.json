@@ -1,0 +1,56 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Win the game",
+      "prompt": "Find the missing number in every round of the set membership game and get the flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2024-blinders}",
+      "hints": [
+        "The server blinds its answers with a fresh key each time.",
+        "What does it still reveal about which element is missing?"
+      ],
+      "steps": [
+        {
+          "key": "curve",
+          "title": "Identify the curve",
+          "prompt": "Which elliptic curve does the protocol use?",
+          "check": {
+            "answer": [
+              "p-256",
+              "p256",
+              "nist p-256",
+              "nist256p",
+              "secp256r1",
+              "prime256v1"
+            ]
+          }
+        },
+        {
+          "key": "protocol",
+          "title": "Name the protocol family",
+          "prompt": "Which family of protocols lets one party test membership in another's set without seeing it?",
+          "check": {
+            "answer": [
+              "private set membership",
+              "private set intersection",
+              "psi",
+              "psm"
+            ]
+          }
+        },
+        {
+          "key": "rounds",
+          "title": "Know the goal",
+          "prompt": "How many rounds must you win?",
+          "check": {
+            "answer_regex": "^16$"
+          }
+        }
+      ]
+    }
+  ]
+}
