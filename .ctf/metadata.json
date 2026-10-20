@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2024-blinders",
+  "slug": "google-ctf-2024-blinders",
   "title": "Google CTF 2024: Blinders",
   "description": "A private set membership protocol on P-256: the server holds {0..255} minus one random number, answers at most two queries per round, and wants the hash of its set. Win 16 rounds to get the flag.",
-  "question": "Find the missing number in every round of the private set membership game and get the flag.",
-  "category": "CRYPTO",
+  "category": "crypto",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Find the missing number in every round of the private set membership game and get the flag."
 }
